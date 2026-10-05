@@ -8,7 +8,7 @@ import React from 'react'
 export default async function CartIcon() {
 
      const response = await getLoggedUserCart()
-      console.log("responseee",response)
+      // console.log("responseee",response)
   return (
     <>
     <Link className='relative flex items-center hover:text-green-600 transition-all duration-300' href={'/cart'}>Cart 

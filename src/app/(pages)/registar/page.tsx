@@ -31,7 +31,7 @@ export default function Registar() {
 
 
     const handleRegister=async (values : registerSchemaType )=>{
-      console.log(values);
+      // console.log(values);
       setIsLoading(true)
       
      try {
@@ -41,7 +41,7 @@ export default function Registar() {
         headers:{"Content-type" : "application/json"}
       })
       const data = await response.json()
-      console.log("register" , data)
+      // console.log("register" , data)
 
       if(data.message=="success"){
         toast.success("Register successfully" , {position:"top-right" , delay:2000 , autoClose:1500})

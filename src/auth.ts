@@ -25,11 +25,11 @@ export const authOptions : NextAuthOptions ={
                     headers:{"Content-type" : "application/json"}
                 })
                 const payload = await response.json()
-                console.log(payload);
+                // console.log(payload);
                 
                 if(payload.message=="success"){
                     const decodedToken:{id:string} = jwtDecode(payload.token);
-                    console.log("MyTokennnnn", decodedToken);
+                    // console.log("MyTokennnnn", decodedToken);
                     
                   return {
                     id:decodedToken.id,

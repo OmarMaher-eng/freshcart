@@ -17,7 +17,7 @@ export default function WishListIcons({id , isWishListed} : {id:string , isWishL
       try {
         setIsWishList(false)
         const response = await Removeproductfromwishlist(id)
-        console.log("removecart" , response);
+        // console.log("removecart" , response);
         if(response.status=="success"){
           toast.success(response.message,{position:"bottom-left" , autoClose:2000 , closeOnClick:true})
         }
@@ -29,7 +29,7 @@ export default function WishListIcons({id , isWishListed} : {id:string , isWishL
        try {
         setIsWishList(true)
      const response = await Addproducttowishlist(id)
-    console.log("wishlisttttttt" , response);
+    // console.log("wishlisttttttt" , response);
     if(response.status=="success"){
       toast.success(response.message,{position:"bottom-left" , autoClose:2000 , closeOnClick:true})
     }

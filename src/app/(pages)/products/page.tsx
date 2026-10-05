@@ -7,7 +7,7 @@ import React from 'react'
 
 export default  function Products({data} :any) {
 
-  console.log(data);
+  // console.log(data);
   
 
   return (

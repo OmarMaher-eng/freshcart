@@ -12,7 +12,7 @@ export default function ForgetPassword() {
     async function handleSumbit(e:React.FormEvent<HTMLFormElement>){
       e.preventDefault()
       const response = await ForgotPasswording(email)
-      console.log(response);
+      // console.log(response);
       if(response.statusMsg=="success"){
         toast.success(response.message)
         router.push(`/verifyResetCode`)

@@ -13,7 +13,7 @@ export default function ClearCartBtn() {
    async function clearCart(){
       try{
           const response = await ClearUserCart()
-        console.log(response);
+        // console.log(response);
         if(response.status=="success"){
             toast.success(response.message ,{position:'top-right' , autoClose:2000 , closeOnClick:true})
             router.refresh()

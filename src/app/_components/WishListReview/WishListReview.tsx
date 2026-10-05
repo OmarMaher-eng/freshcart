@@ -11,7 +11,7 @@ import AddBtn from '../AddBtn/AddBtn';
 
 export default function WishListReview({product} : {product:WishListinggg}) {
 
-    console.log( "aaaaaaaaaaaaaa",product);
+    // console.log( "aaaaaaaaaaaaaa",product);
     
     const router = useRouter()
 
@@ -21,7 +21,7 @@ export default function WishListReview({product} : {product:WishListinggg}) {
       try {
         setIsLoading(true)
         const response = await Removeproductfromwishlist(product.id)
-      console.log("delete" , response);
+      // console.log("delete" , response);
       if(response.status=="success"){
         toast.success(response.message,{position:"bottom-left" , autoClose:2000 , closeOnClick:true})
         router.refresh()

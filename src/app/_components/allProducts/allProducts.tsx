@@ -12,7 +12,7 @@ export default async function AllProducts() {
   console.log(data);
 
     const wishList = await Getloggeduserwishlist()
-        console.log( "ffffffffffffffff", wishList);
+        // console.log( "ffffffffffffffff", wishList);
 
     const WishListIds = wishList.data.map((wishList:WishListinggg)=>wishList.id)    
 

@@ -18,7 +18,7 @@ export default function AddBtn({id , showAlways=false} : {id:string , showAlways
        try{
         setIsLodaing(true)
          const response = await AddProductToCart(id)
-             console.log(response);
+            //  console.log(response);
              if(response.status=="success"){
                 router.refresh()
                 toast.success(response.message,{position:"top-right" , autoClose:2000 , closeOnClick:true})

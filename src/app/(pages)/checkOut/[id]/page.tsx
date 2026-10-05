@@ -18,7 +18,7 @@ export default function CheckOut() {
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
   const {id} :{id:string}= useParams() 
-    console.log(id);
+    // console.log(id);
     
    const form =  useForm<CheckOutSchemaType>({
       defaultValues:{
@@ -33,13 +33,13 @@ export default function CheckOut() {
 
 
     const handleCheckOut=async (values: CheckOutSchemaType )=>{
-      console.log(values);
+      // console.log(values);
       setIsLoading(true)
 
       try {
         setIsLoading(true)
         const response = await onlinePayment(id , "http://localhost:3000/" , values )
-        console.log("paymenttttt" , response)
+        // console.log("paymenttttt" , response)
         if(response.status="success"){
           window.location.href = response.session.url
         }

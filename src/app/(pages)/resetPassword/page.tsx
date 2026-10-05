@@ -10,7 +10,7 @@ export default function ResetPassword() {
      const [email, setEmail] = useState("")
     const router = useRouter()
     // const email = useSearchParams()
-      console.log(email);
+      // console.log(email);
     
 
 
@@ -18,7 +18,7 @@ export default function ResetPassword() {
     async function handleSumbit(e:React.FormEvent<HTMLFormElement>){
       e.preventDefault()
       const response = await resetPasswording( email ,  newPassword)
-      console.log(response);
+      // console.log(response);
       if(response.token){
         toast.success('password change succesfully')
         router.push(`/login`)

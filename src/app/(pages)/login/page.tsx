@@ -31,7 +31,7 @@ export default function Login() {
 
 
     const handleLogin=async (values: loginSchemaType )=>{
-      console.log(values);
+      // console.log(values);
       setIsLoading(true)
       
       try{
@@ -41,7 +41,7 @@ export default function Login() {
           redirect:false,
           callbackUrl:"/"
         })
-        console.log("loginnnnn",response);
+        // console.log("loginnnnn",response);
         
         if(response?.ok){
            toast.success("Login successfully" , {position:"top-right" , delay:2000 , autoClose:1500}) 

@@ -17,7 +17,7 @@ export default function Verifyresetcode() {
     async function handleSumbit(e:React.FormEvent<HTMLFormElement>){
       e.preventDefault()
       const response = await verifyResetCodeing(resetCode)
-      console.log(response);
+      // console.log(response);
       if(response.status=="Success"){
         toast.success('verfiy code succesfully')
         router.push(`/resetPassword`)

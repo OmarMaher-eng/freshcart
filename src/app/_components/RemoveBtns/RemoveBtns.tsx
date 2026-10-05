@@ -12,7 +12,7 @@ export default function RemoveBtns({id} :{id:string}) {
   async function deletefromCart(id:string){
     try{
       const response = await removeProductCart(id)
-    console.log(response);
+    // console.log(response);
     if(response.status=="success"){
       toast.success(response.message,{position:"top-right" , autoClose:2000 , closeOnClick:true})
       router.refresh()
