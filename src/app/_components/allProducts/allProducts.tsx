@@ -1,9 +1,10 @@
 import { getAllProducts } from '@/api/allProducts.api'
 import React from 'react'
 import { WishListinggg } from '@/types/wishList.types';
-import SingleProduct from '../SingleProduct/SingleProduct';
+
 import { ProductType } from '@/types/allProducts.types';
 import { Getloggeduserwishlist } from '@/wishListAction/Getloggeduserwishlist.action';
+import SingleProduct from '../singleProduct/SingleProduct';
 
 
 

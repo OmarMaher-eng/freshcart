@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./_components/Navbar/Navbar";
  import { ToastContainer } from 'react-toastify';
 import MySessionProvider from "@/MySessionProvider/MySessionProvider";
-import Navbarwepper from "./_components/Navbarwepper/Navbarwepper";
+import Navbarwepper from "./_components/navbarwepper/Navbarwepper";
+
 
 
 

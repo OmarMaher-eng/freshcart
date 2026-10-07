@@ -1,7 +1,6 @@
-import React from 'react'
 
 import CartIcon from '../CartIcon/CartIcon'
-import Navbar from '../Navbar/Navbar'
+import Navbar from '../navbar/Navbar'
 
 export default function Navbarwepper() {
   return (
