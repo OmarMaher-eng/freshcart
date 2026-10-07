@@ -1,6 +1,7 @@
 
 import CartIcon from '../CartIcon/CartIcon'
-import Navbar from '../navbar/Navbar'
+import Navbar from '../Navbar/Navbar'
+
 
 export default function Navbarwepper() {
   return (

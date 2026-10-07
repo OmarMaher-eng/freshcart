@@ -11,6 +11,7 @@ import Navbarwepper from "./_components/navbarwepper/Navbarwepper";
 
 
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

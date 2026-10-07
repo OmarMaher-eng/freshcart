@@ -8,6 +8,7 @@ import SingleProduct from '../singleProduct/SingleProduct';
 
 
 
+
 export default async function AllProducts() {
   let {data} = await getAllProducts();
   console.log(data);
