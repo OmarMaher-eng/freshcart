@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
  import { ToastContainer } from 'react-toastify';
 import MySessionProvider from "@/MySessionProvider/MySessionProvider";
-import Navbarwepper from "./_components/navbarwepper/Navbarwepper";
+import Navbarwepper from "./_components/Navbarwepper/Navbarwepper";
 
 
 
