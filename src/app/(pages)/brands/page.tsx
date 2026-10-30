@@ -1,7 +1,10 @@
-import React from 'react'
+import AllBrands from '@/app/_components/allBrands/allBrands'
 
-export default function Brands() {
+export default function BrandsPage() {
   return (
-    <div>Brands</div>
+    <>
+      <title>Brands</title>
+      <AllBrands />
+    </>
   )
 }

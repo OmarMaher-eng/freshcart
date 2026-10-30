@@ -1,7 +1,10 @@
-import React from 'react'
+import AllCategories from '@/app/_components/allCategories/allCategories'
 
-export default function Categories() {
+export default function CategoriesPage() {
   return (
-    <div>Categories</div>
+    <>
+      <title>Categories</title>
+      <AllCategories />
+    </>
   )
 }

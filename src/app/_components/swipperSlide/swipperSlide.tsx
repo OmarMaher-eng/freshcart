@@ -24,7 +24,7 @@ export default function SwipperSlider({data} :{data:ProductType}) {
     
     >
 
-        {data.images.map((image)=><SwiperSlide onClick={()=>setSelectedImage(image)}><img src={image} alt="" /></SwiperSlide>)}
+        {data.images.map((image)=><SwiperSlide key={image} onClick={()=>setSelectedImage(image)}><img src={image} alt="" /></SwiperSlide>)}
       
       
       ...
@@ -48,7 +48,7 @@ export default function SwipperSlider({data} :{data:ProductType}) {
               </div>
              </div> 
 
-            <AddBtn showAlways id={data.id}/>
+            <AddBtn showAlways id={data._id}/>
     </div>
    </div>
    </div>

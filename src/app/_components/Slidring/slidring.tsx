@@ -1,12 +1,12 @@
 "use client"
-import { getAllCategories } from '@/api/allCategory.api';
-import React from 'react'
+import { CategoryType } from '@/types/allCategories.types';
+import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 
 
-export default function Slidring({data} : any) {
+export default function Slidring({data} : {data: CategoryType[]}) {
 
 //  console.log('all categories' , data);
   
@@ -24,8 +24,10 @@ export default function Slidring({data} : any) {
           autoplay = {{delay:3000}}
           breakpoints={{640:{slidesPerView:3} , 768:{slidesPerView:4}, 1024:{slidesPerView:5}, 1280:{slidesPerView:7}}}
         >
-          {data.map((category :any)=><SwiperSlide>
-            <img className='w-full h-50' src={category.image} />
+          {data.map((category)=><SwiperSlide key={category._id}>
+            <Link href={`/categories/${category._id}`}>
+              <img className='w-full h-50' src={category.image} alt={category.name} />
+            </Link>
           </SwiperSlide>)}
           
           
@@ -36,4 +38,3 @@ export default function Slidring({data} : any) {
     </>
   )
 }
-

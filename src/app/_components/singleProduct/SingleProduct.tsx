@@ -29,10 +29,10 @@ export default function SingleProduct({currentProduct , isWishListed} : {current
       
                  <Card className="w-full max-w-sm ring-0 hover:ring-1 hover:ring-green-600 cursor-pointer group">
                   <div className='flex justify-end '>
-                   <WishListIcons id={currentProduct.id} isWishListed={isWishListed}/>
+                   <WishListIcons id={currentProduct._id} isWishListed={isWishListed}/>
                   </div>
 
-                     <Link href={`/products/${currentProduct.id}`}>
+                     <Link href={`/products/${currentProduct._id}`}>
           <CardHeader>
             <CardTitle>
               <img src={currentProduct.imageCover} alt={currentProduct.title} />
@@ -54,7 +54,7 @@ export default function SingleProduct({currentProduct , isWishListed} : {current
 
 
 
-          <AddBtn id={currentProduct.id}/>
+          <AddBtn id={currentProduct._id}/>
         </Card>
             </div>
           </div>

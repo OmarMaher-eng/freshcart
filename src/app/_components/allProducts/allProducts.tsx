@@ -1,4 +1,4 @@
-import { getAllProducts } from '@/api/allProducts.api'
+import { getAllProducts, getProductsByBrand, getProductsByCategory } from '@/api/allProducts.api'
 import React from 'react'
 import { WishListinggg } from '@/types/wishList.types';
 
@@ -13,9 +13,22 @@ import SingleProduct from '../singleProduct/SingleProduct';
 
 
 
-export default async function AllProducts() {
-  let {data} = await getAllProducts();
-  console.log(data);
+export default async function AllProducts({
+  categoryId,
+  categoryName,
+  brandId,
+  brandName,
+}: {
+  categoryId?: string
+  categoryName?: string
+  brandId?: string
+  brandName?: string
+}) {
+  const {data} = categoryId
+    ? await getProductsByCategory(categoryId)
+    : brandId
+      ? await getProductsByBrand(brandId)
+      : await getAllProducts();
 
     const wishList = await Getloggeduserwishlist()
         // console.log( "ffffffffffffffff", wishList);
@@ -24,12 +37,16 @@ export default async function AllProducts() {
 
   return (
   <>
-  <title>Products</title>
   <div className='w-[90%] mx-auto  my-18'>
+    {(categoryName || brandName) && <h1 className="mb-6 text-2xl font-semibold">{categoryName || brandName}</h1>}
     <div className='flex flex-wrap '>
-      {data.map((currentProduct :ProductType )=>
-        <SingleProduct key={currentProduct.id} currentProduct={currentProduct} isWishListed={WishListIds.includes(currentProduct.id)}/>    
-    )}
+      {data.length === 0 ? (
+        <p>No products found.</p>
+      ) : (
+        data.map((currentProduct :ProductType )=>
+          <SingleProduct key={currentProduct._id} currentProduct={currentProduct} isWishListed={WishListIds.includes(currentProduct._id)}/>
+        )
+      )}
     </div>
   </div>
   
